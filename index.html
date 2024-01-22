@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Todo List</title>
+        <script src="https://kit.fontawesome.com/4c536a6bd5.js"></script>
+        <script src="main.js" defer></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-check-double"></i>
+                <h1 class="page-name">Todo List</h1>
+            </div>
+        </header>
+        <main class="main">
+            <nav class="nav" id="nav">
+                <!-- Default projects -->
+                <div class="default-projects-list">
+                    <button class="button-default-project today-button" id="button-today-projects">
+                        <i class="fas fa-calendar-day"></i>
+                        Today
+                    </button>
+                    <button class="button-default-project week-button" id="button-week-projects">
+                        <i class="fas fa-calendar-week"></i>
+                        This week
+                    </button>
+                </div>
+                <!-- User projects -->
+                <button class="button-add-project" id="button-add-project"><i class="fas fa-plus"></i>Add Project</button>
+                <div class="add-project-popup" id="add-project-popup">
+                    <input class="input-add-project-popup" id="input-add-project-popup" type="text"/>
+                    <div class="add-project-popup-buttons">
+                        <button class="button-add-project-popup" id="button-add-project-popup">Add</button>
+                        <button class="button-cancel-project-popup" id="button-cancel-project-popup">Cancel</button>
+                    </div>
+                </div>
+            </nav>
+        <!-- Tasks -->
+            <div class="project-preview" id="project-preview">
+                <div class="choice today active">
+                    <h2 class="content-title">Today</h2>
+                </div>
+                <div class="choice week">
+                    <h2 class="content-title">This Week</h2>
+                </div>
+                <div class="projects-list" id="projects-list"></div>
+
+            </div>
+        </main>
+    </body>
+</html>
+

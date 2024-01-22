@@ -1,0 +1,120 @@
+* {
+    padding:0;
+    margin: 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+    font-size: x-large;
+    background-color: black;
+    color: whitesmoke;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.main {
+    display: grid;
+    background-color: whitesmoke;
+    grid-template-columns: 300px 1fr;
+    flex: 1;
+    
+}
+
+.nav {
+    padding: 20px;
+    max-width: 200px;
+    background-color: lightgrey;
+}
+
+.default-projects-list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.button-default-project {
+    padding:10px 0px 10px 0px;
+    font-size: large;
+    text-align: start;
+    border: 0cap;
+    background-color: lightgrey;
+    font-weight: 800s;
+}
+
+.button-default-project:hover {
+    background-color: azure;
+    padding-left:10px; 
+    cursor: pointer;
+}
+
+
+.button-add-project {
+    display:block;
+    padding: 10px;
+    border-radius: .5rem;
+}
+
+.add-project-popup {
+    display: none;
+}
+
+.project-preview {
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+.projects-list {
+    margin: 10px 0px 10px 0px;
+    flex: 1;
+    flex-direction: column;
+}
+
+.choice {
+    display: flex;
+}
+
+.newProj {
+    margin: 10px 0px 10px 0px;
+    text-align: start;
+    font-size: large;
+    border: 0cap;
+    cursor: pointer;
+    flex:1;
+    background-color: whitesmoke;
+}
+
+.input-add-project-popup {
+    font-size: larger;
+}
+
+.delProj {
+    border:0cap;
+    padding: 0px 10px 0px 10px;
+    flex:0;
+    background-color: whitesmoke;
+
+}
+
+.projstyle {
+    display: flex;
+}
+
+.choice {
+    display: none;
+    margin-top: 20px;
+}
+
+.active {
+    display: block;
+}
+
+.input-add-project-popup {
+    max-width: 200px;
+}
