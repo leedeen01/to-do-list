@@ -4,7 +4,6 @@ let weekList = localStorage.getItem("week") ? JSON.parse(localStorage.getItem("w
 let choice = "today"
 
 function loadProjectBar() {
-    displayProjects();
     const addProj = document.querySelector(".button-add-project");
     const popUp = document.querySelector(".add-project-popup");
     const adding = document.querySelector(".button-add-project-popup");
@@ -18,6 +17,7 @@ function loadProjectBar() {
         week.classList.remove("active");
         today.classList.add("active");
         choice = "today";
+        displayProjects();
         loadProjectBar();
     })
 
@@ -25,6 +25,7 @@ function loadProjectBar() {
         today.classList.remove("active");
         week.classList.add("active");
         choice = "week";
+        displayProjects();
         loadProjectBar();
     })
 
@@ -53,7 +54,6 @@ function loadProjectBar() {
         //creating new project
         createProject(inputVal, choiceList);
         //display project
-        displayProjects();
     });
 
     let deleteBtn = document.querySelectorAll(".delProj");
@@ -71,7 +71,8 @@ function deleteProject(i) {
     }
     choiceList.splice(i, 1);
     localStorage.setItem(choice, JSON.stringify(choiceList));
-    location.reload();
+    displayProjects();
+    loadProjectBar();
 }
 
 export function displayProjects() {
@@ -92,5 +93,6 @@ export function displayProjects() {
 function createProject(project, choiceList) {
     choiceList.push(project);
     localStorage.setItem(choice, JSON.stringify(choiceList));
-    location.reload();
+    displayProjects();
+    loadProjectBar();
 }
